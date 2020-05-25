@@ -603,6 +603,16 @@ input[type=submit] {
   border-radius: 15px;
   background-color: inherit;
 }
+
 /*
 Contact
 */
+
+.contactPagina {
+  width: 80%;
+  margin: 10% auto 0 auto;
+}
+
+.locatie {
+  float: left;
+}
