@@ -82,7 +82,7 @@ ul {
   position: relative;
   width: 20%;
   padding: 5%;
-  margin: auto;
+  margin: 10% auto;
   background-color: #212121;
   border-radius: 15px;
 }
@@ -93,7 +93,8 @@ ul {
 }
 
 .leeftijdVraag img {
-  margin: 0;
+  margin-left: 20%;
+  width: 60%;
 }
 
 .leeftijdVraag form,
@@ -610,9 +611,31 @@ Contact
 
 .contactPagina {
   width: 80%;
+  height: 40vh;
   margin: 10% auto 0 auto;
 }
 
 .locatie {
   float: left;
+  margin-top: 5%;
+  margin-left: 5%;
+  width: 40%;
+  height: 100%;
+}
+
+.socials {
+  float: left;
+  margin-top: 10%;
+  margin-left: 10%;
+  width: 40%;
+  height: 100%;
+}
+
+.socials img,
+.socials h2 {
+  display: inline-block;
+}
+
+.socials a {
+  margin-top: 10em;
 }

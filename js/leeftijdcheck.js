@@ -1,11 +1,20 @@
-//Code om te controleren of de gebruiker deze vraag al eerder heeft beantwoord
-//controle wordt uitgevoerd door te kijken of de vorige website van het kwartje was of niet
 
-if(document.referrer.indexOf(window.location.hostname)==-1) {
-  //leeftijdcheck laten zien
-  document.getElementById('leeftijd').style.display = 'block';
+var verificatie;
+
+var x = document.getElementById('leeftijd');
+
+  if(verificatie > 0) {
+    //leeftijdcheck niet laten zien
+    x.style.display = 'none';
+  } else {
+    //leeftijdcheck laten zien
+    x.style.display = 'block';
+  }
+
+// Verbergt de leeftijd verificatie
+function hideCheck() {
+  verificatie + 1;
+  return;
 }
 
-document.getElementById('test').onclick = function () {
-  document.getElementById('leeftijd').style.display = 'block';
-};
+//Code om te controleren of de gebruiker deze vraag al eerder heeft beantwoord
