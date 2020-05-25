@@ -41,7 +41,7 @@ h1, h2, h3, h4, p {
 
 h1 {
   font-family: nexaLight, sans-serif;
-  font-size: 3em;
+  font-size: 3.2em;
   text-align: center;
 }
 
@@ -69,6 +69,7 @@ ul {
   list-style-type: none;
 }
 
+/* leeftijdvraag verschijnt d.m.v. javascript */
 #leeftijd {
   position: fixed;
   width: calc(100vw - (100vw - 100%));
@@ -110,6 +111,8 @@ header {
   width: 100%;
   height: 12%;
   background: rgb(33,33,33);
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(33,33,33,0)), color-stop(15%, rgba(33,33,33,0.6236695361738445)), color-stop(30%, rgba(33,33,33,0.875770376509979)), to(rgba(33,33,33,1)));
+  background: -o-linear-gradient(bottom, rgba(33,33,33,0) 0%, rgba(33,33,33,0.6236695361738445) 15%, rgba(33,33,33,0.875770376509979) 30%, rgba(33,33,33,1) 100%);
   background: linear-gradient(to top, rgba(33,33,33,0) 0%, rgba(33,33,33,0.6236695361738445) 15%, rgba(33,33,33,0.875770376509979) 30%, rgba(33,33,33,1) 100%);
   z-index: 100;
 }
@@ -131,11 +134,16 @@ header img {
   max-height: 100%;
   margin: 0;
   float: left;
+  -webkit-transition: all .3s ease-out;
+  -o-transition: all .3s ease-out;
   transition: all .3s ease-out;
 }
 
+/* Pijl in header verschuift naar links bij hover */
 .arrowHeader:hover {
-  transform: translateX(-10%);
+  -webkit-transform: translateX(-10%);
+      -ms-transform: translateX(-10%);
+          transform: translateX(-10%);
 }
 
 .logoHeader {
@@ -143,12 +151,17 @@ header img {
   margin: 0;
   float: right;
   margin-right: 47.5%;
+  -webkit-transition: all .3s ease-out;
+  -o-transition: all .3s ease-out;
   transition: all .3s ease-out;
   margin-top: 0;
 }
 
+/* Logo van het kwartje vergroot bij hover */
 .logoHeader:hover {
-  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 /*
@@ -204,11 +217,15 @@ Fullscreen Menu Index
   margin: auto;
   display: inline-block;
   vertical-align: middle;
+  -webkit-transition: all .3s ease-out;
+  -o-transition: all .3s ease-out;
   transition: all .3s ease-out;
 }
 
 .main li:hover > .arrowMenu {
-  transform: translateX(20%);
+  -webkit-transform: translateX(20%);
+      -ms-transform: translateX(20%);
+          transform: translateX(20%);
 }
 
 /*
@@ -223,7 +240,8 @@ Menu foto Index
 }
 
 .mainImage img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin: 0;
   height: 100%;
   max-height: 100%;
@@ -248,13 +266,18 @@ Onze bieren
 .bierCard img {
   width: 80%;
   margin-left: 10%;
+  -webkit-transition: all .3s ease-out;
+  -o-transition: all .3s ease-out;
   transition: all .3s ease-out;
   display: block;
   cursor: pointer;
 }
 
+/* laat de bier afbeelding vergroten bij een hover*/
 .bierCard img:hover {
-  transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 .bierCard input[type=checkbox]{
@@ -276,11 +299,16 @@ Onze bieren
   margin-left: 80%;
   margin-top: -10%;
   width: 10%;
+  -webkit-transition: all .3s ease-out;
+  -o-transition: all .3s ease-out;
   transition: all .3s ease-out;
 }
 
+/* laat het pijltje naar rechts bewegen bij een hover*/
 .bierCard:hover .cardArrow {
-  transform: translateX(20px);
+  -webkit-transform: translateX(20px);
+      -ms-transform: translateX(20px);
+          transform: translateX(20px);
 }
 
 .cardText {
@@ -353,7 +381,8 @@ Het brouwproces en de brouwerij
 }
 
 .infoTitle img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin: 0;
   height: 100%;
   max-width: 100%;
@@ -388,7 +417,8 @@ Het brouwproces en de brouwerij
 .infoCol40 > img,
 .infoCol60 > img {
   max-width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .infoCol
@@ -474,7 +504,8 @@ Evenementen
 }
 
 .eventImage img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin: 0;
   height: 100%;
   max-height: 100%;
@@ -484,6 +515,7 @@ Evenementen
 /*
 Bestellen
 */
+
 .orderOverview {
   width: 40%;
   margin: 8% auto 0 auto;
@@ -524,7 +556,8 @@ input[type=date],
 select{
  width: 100%;
  padding: 12px 20px;
- box-sizing: border-box;
+ -webkit-box-sizing: border-box;
+         box-sizing: border-box;
  border-bottom: 1px solid #ffffff;
  background-color: #252525;
 }
@@ -537,12 +570,14 @@ select{
   color: #D9470D;
 }
 
+/* laat zien dat het veld incorrect is ingevuld */
 input:focus:not(:placeholder-shown):invalid,
 select:focus:not(:placeholder-shown):invalid {
   border: none;
   border-bottom: 2px solid #D9470D;
 }
 
+/* Laat fout melding zien wanneer er wordt getypt in het vak*/
 input:focus:not(:placeholder-shown):invalid + #foutmelding1,
 input:focus:not(:placeholder-shown):invalid + #foutmelding2,
 input:focus:not(:placeholder-shown):invalid + #foutmelding3,
@@ -550,6 +585,7 @@ input:focus:not(:placeholder-shown):invalid + label + #foutmelding4 {
   display: inline-block;
 }
 
+/* laat zien dat het veld correct is ingevuld */
 input:valid,
 select:valid {
   border: none;
