@@ -1,0 +1,572 @@
+@font-face {
+  font-family: nexaBold;
+  src: url(../fonts/Nexa/NexaBold.otf) format("opentype");
+}
+@font-face {
+  font-family: nexaLight;
+  src: url(../fonts/Nexa/NexaLight.otf) format("opentype");
+}
+@font-face {
+  font-family: poppinsItalic;
+  src: url(../fonts/Poppins/Poppins-Italic.ttf);
+}
+@font-face {
+  font-family: poppinsMedium;
+  src: url(../fonts/Poppins/Poppins-Medium.ttf);
+}
+
+/*
+standaard
+*/
+
+html,
+body {
+  background-color: #212121;
+  padding: 0;
+  margin: 0;
+  width: calc(100vw - (100vw - 100%));
+  height: calc(100vh - (100vh - 100%));
+  color: #ffffff;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, p {
+  padding: 0;
+  margin:0;
+}
+
+h1 {
+  font-family: nexaLight, sans-serif;
+  font-size: 3em;
+  text-align: center;
+}
+
+h2 {
+  font-family: nexaLight, sans-serif;
+  font-size: 2em;
+}
+
+h3 {
+  font-family: nexaLight, sans-serif;
+  font-size: 1.5em;
+}
+
+h4 {
+  font-family: poppinsItalic, sans-serif;
+  font-size: 1.2em;
+}
+
+p {
+  font-family: poppinsMedium, sans-serif;
+  font-size: 1em;
+}
+
+ul {
+  list-style-type: none;
+}
+
+#leeftijd {
+  position: fixed;
+  width: calc(100vw - (100vw - 100%));
+  height: calc(100vh - (100vh - 100%));
+  background-color: rgba(0,0,0,0.7);
+  display: none;
+}
+
+.leeftijdVraag {
+  position: relative;
+  width: 20%;
+  padding: 5%;
+  margin: auto;
+  background-color: #212121;
+  border-radius: 15px;
+}
+
+.leeftijdVraag h2 {
+  margin-top: 10%;
+  text-align: center;
+}
+
+.leeftijdVraag img {
+  margin: 0;
+}
+
+.leeftijdVraag form,
+.leeftijdVraag > form > input {
+  float: left;
+  width: 50%;
+}
+
+/* header */
+
+header {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 12%;
+  background: rgb(33,33,33);
+  background: linear-gradient(to top, rgba(33,33,33,0) 0%, rgba(33,33,33,0.6236695361738445) 15%, rgba(33,33,33,0.875770376509979) 30%, rgba(33,33,33,1) 100%);
+  z-index: 100;
+}
+
+header li {
+  max-height: 50%;
+  display: inline;
+  float: left;
+}
+
+header img {
+  width: 100%;
+}
+
+.arrowHeader {
+  height: inherit;
+  width: 4%;
+  height: 60%;
+  max-height: 100%;
+  margin: 0;
+  float: left;
+  transition: all .3s ease-out;
+}
+
+.arrowHeader:hover {
+  transform: translateX(-10%);
+}
+
+.logoHeader {
+  width: 6%;
+  margin: 0;
+  float: right;
+  margin-right: 47.5%;
+  transition: all .3s ease-out;
+  margin-top: 0;
+}
+
+.logoHeader:hover {
+  transform: scale(1.1);
+}
+
+/*
+Fullscreen Menu Index
+*/
+
+.fullScreen {
+  overflow: hidden;
+}
+
+.logoMenu {
+  height: 18%;
+  margin-top: 5%;
+  text-align: center;
+}
+
+.logoMenu img {
+  max-height: 100%;
+  display: inline-block;
+}
+
+.main {
+  height: 80%;
+  width: 60%;
+  float: left;
+  margin: 0;
+}
+
+.main ul {
+  height: 70%;
+  margin-top: 5%;
+  padding: 0;
+}
+
+.main li {
+  margin: 1% auto;
+  padding-top: 3%;
+  height: 15%;
+  width: 50%;
+
+}
+
+.main h2 {
+  margin: auto 12%;
+  width: 60%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.arrowMenu {
+  height: 50%;
+  max-height: 100%;
+  margin: auto;
+  display: inline-block;
+  vertical-align: middle;
+  transition: all .3s ease-out;
+}
+
+.main li:hover > .arrowMenu {
+  transform: translateX(20%);
+}
+
+/*
+Menu foto Index
+*/
+
+.mainImage {
+  width: 40%;
+  height: 100%;
+  float: left;
+  margin: 0 0 0 0;
+}
+
+.mainImage img {
+  object-fit: cover;
+  margin: 0;
+  height: 100%;
+  max-height: 100%;
+  width: 100%;
+}
+
+/*
+Onze bieren
+*/
+
+.biertjes {
+  margin-top: 10%;
+}
+
+.bierCard {
+  float: left;
+  width: 27%;
+  margin: 3% 3% 1% 3%;
+  cursor: pointer;
+}
+
+.bierCard img {
+  width: 80%;
+  margin-left: 10%;
+  transition: all .3s ease-out;
+  display: block;
+  cursor: pointer;
+}
+
+.bierCard img:hover {
+  transform: scale(1.05);
+}
+
+.bierCard input[type=checkbox]{
+  display: none;
+}
+
+.cardOverlay {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: #111111;
+  display: none;
+  z-index: 200;
+  overflow-x: hidden;
+}
+
+.cardArrow {
+  display: block;
+  margin-left: 80%;
+  margin-top: -10%;
+  width: 10%;
+  transition: all .3s ease-out;
+}
+
+.bierCard:hover .cardArrow {
+  transform: translateX(20px);
+}
+
+.cardText {
+  width: 100%;
+  margin-top: 2%;
+}
+
+.biertjes h1,
+.cardText h4 {
+  text-align: center;
+}
+
+.cardTaste table {
+  width: 70%;
+  margin-left: 15%;
+}
+
+.dot,
+.dotFill,
+.dotHalf {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dotFill {
+  background-color: #eee;
+}
+
+.dotHalf {
+  background-color: #aaa;
+}
+
+/*
+Detail pagina bier
+*/
+
+.cardFull {
+  width: 60%;
+  height: 60vh;
+  margin: 10% auto 10% auto;
+}
+
+
+.cardFull img {
+  width: 40%;
+  float: left;
+}
+
+.cardFull .cardTaste {
+  width: 60%;
+  margin-top: 4%;
+  float: left;
+  text-align: left;
+}
+
+.cardFull .cardTaste table {
+  margin: 6% 0 6% 0;
+}
+
+/*
+Het brouwproces en de brouwerij
+*/
+
+.infoTitle {
+  width: 100%;
+  height: 40%;
+  margin: 0 auto 0 auto;
+}
+
+.infoTitle img {
+  object-fit: cover;
+  margin: 0;
+  height: 100%;
+  max-width: 100%;
+  width: 100%;
+}
+
+.infoTitle > h1 {
+  position: relative;
+  margin-top: -2%;
+  text-shadow: 0px -3px 22px rgba(0, 0, 0, 0.8);
+}
+
+.infoPage {
+  width: 60%;
+  margin: 5% auto 0 auto;
+}
+
+.infoCol25,
+.infoCol40,
+.infoCol60,
+.infoRow {
+  float: left;
+  padding: 1%;
+}
+
+.infoCol60 > p {
+  margin-top: 5%;
+  padding-right: 10%;
+}
+
+.infoCol25 > img,
+.infoCol40 > img,
+.infoCol60 > img {
+  max-width: 100%;
+  object-fit: cover;
+}
+
+.infoCol
+
+.infoRow {
+  width: 100%;
+  margin: auto;
+}
+
+.infoCol25 {
+  width: 23%;
+}
+
+.infoCol40 {
+  width: 38%;
+}
+
+.infoCol60 {
+  width: 58%;
+}
+
+/*
+Evenementen
+*/
+.evenementen {
+  width: 60%;
+  margin: 7% auto 0 auto;
+}
+
+.eventCard {
+  float: left;
+  width: 100%;
+  margin: 3% 3% 1% 3%;
+  height: auto;
+}
+
+.eventInfo {
+  float: left;
+  width: 55%;
+}
+
+.eventInfo h2,
+.eventInfo h3 {
+  margin: 1%;
+}
+
+.eventButton {
+  float: left;
+  width: 35%;
+  padding: 2% 4%;
+  margin-top: 2%;
+  text-align: center;
+  border-radius: 15px;
+  border: 1px solid #ffffff;
+}
+
+.eventButton:hover {
+  border: 2px solid #ffffff;
+}
+
+.eventButton h3,
+.eventButton img {
+  display: inline-block;
+}
+
+.eventButton img {
+  width: 8%;
+}
+
+.eventPrijs {
+  float: right;
+  margin-top: 2%;
+}
+
+.eventOrder {
+  margin-top: 2%;
+}
+
+.eventImage {
+  float: right;
+  width: 40%;
+  height: 100%;
+}
+
+.eventImage img {
+  object-fit: cover;
+  margin: 0;
+  height: 100%;
+  max-height: 100%;
+  width: 100%;
+}
+
+/*
+Bestellen
+*/
+.orderOverview {
+  width: 40%;
+  margin: 8% auto 0 auto;
+  text-align: center;
+}
+
+.orderOverview h4 {
+  text-align: right;
+}
+
+.orderForm {
+  width: 30%;
+  margin: 2% auto 5% auto;
+}
+
+input,
+legend,
+label,
+select,
+option {
+  font-family: poppinsMedium, sans-serif;
+  font-size: 1em;
+  border: none;
+  color: #ffffff;
+}
+
+fieldset, input {
+  border-radius: 5px;
+}
+
+fieldset {
+  margin-top: 3%;
+}
+
+input[type=text],
+input[type=email],
+input[type=date],
+select{
+ width: 100%;
+ padding: 12px 20px;
+ box-sizing: border-box;
+ border-bottom: 1px solid #ffffff;
+ background-color: #252525;
+}
+
+#foutmelding1,
+#foutmelding2,
+#foutmelding3,
+#foutmelding4 {
+  display: none;
+  color: #D9470D;
+}
+
+input:focus:not(:placeholder-shown):invalid,
+select:focus:not(:placeholder-shown):invalid {
+  border: none;
+  border-bottom: 2px solid #D9470D;
+}
+
+input:focus:not(:placeholder-shown):invalid + #foutmelding1,
+input:focus:not(:placeholder-shown):invalid + #foutmelding2,
+input:focus:not(:placeholder-shown):invalid + #foutmelding3,
+input:focus:not(:placeholder-shown):invalid + label + #foutmelding4 {
+  display: inline-block;
+}
+
+input:valid,
+select:valid {
+  border: none;
+  border-bottom: 2px solid #5AC456;
+}
+
+input[type=submit] {
+  border: 1px solid #ffffff;
+  width: 40%;
+  margin-left: 30%;
+  font-size: 1.2em;
+  padding: 2% 4%;
+  margin-top: 2%;
+  text-align: center;
+  border-radius: 15px;
+  background-color: inherit;
+}
+/*
+Contact
+*/

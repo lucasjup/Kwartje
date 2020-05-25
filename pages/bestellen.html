@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <title>Het kwartje - kaartje kopen</title>
+  </head>
+  <body>
+    <header>
+      <ul>
+        <li class="arrowHeader">
+          <a href="../evenementen.html"><img src="../img/arrow-left.svg" alt="terug naar vorige pagina"></a>
+        </li>
+        <li class="logoHeader">
+          <a href="../index.html"><img src="../img/kwartjeLogo.svg" alt="terug naar start"></a>
+        </li>
+      </ul>
+    </header>
+    <div class="orderOverview">
+      <h1>Bier experimenten 2020</h1>
+      <h2>16 augustus 2020 van 12:00 - 20:00</h2>
+      <h3>Zamenhofstraat 90, 2518 LB, Den Haag</h3>
+      <h4>€15,- p.p.</h4>
+    </div>
+    <form action="" method="get" class="orderForm">
+      <fieldset>
+        <legend>
+          <label for="naam"> Voornaam en achternaam </label>
+        </legend>
+        <input type="text" id="naam" name="naam" placeholder="Voornaam" required>
+        <p id="foutmelding1"> Het veld is leeg</p>
+      </fieldset>
+
+      <fieldset>
+        <legend>
+          <label for="email"> Email </label>
+        </legend>
+        <input type="email" id="email" name="email" placeholder="uw e-mailadres" required>
+        <p id="foutmelding2"> Het veld is leeg of incorrect ingevuld </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>
+          <label for="birth"> Geboortedatum </label></br>
+        </legend>
+        <input type="date" id="birth" name="birth" required></br>
+        <p id="foutmelding3"> Sorry je bent te jong om deel te mogen nemen</p>
+      </fieldset>
+
+      <fieldset>
+        <legend> Hoeveel kaartjes wilt u halen? </legend>
+          <select name="kaartjes" required>
+            <option value="">Selecteer het aantal kaartjes</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+          </select>
+        </span>
+      </fieldset>
+
+      <fieldset>
+        <legend> Selecteer uw bank </legend>
+        <select name="bank" required>
+          <option value="">Selecteer uw bank</option>
+          <option value="abn">ABN Amro</option>
+          <option value="asn">ASN Bank</option>
+          <option value="bunq">Bunq</option>
+          <option value="ing">ING</option>
+          <option value="knab">Knab</option>
+          <option value="rabo">Rabobank</option>
+          <option value="sns">SNS</option>
+          <option value="trio">Triodos Bank</option>
+        </select>
+      </fieldset>
+
+      </br>
+      <div class="totaalbedrag">
+        <h4>Totaalbedrag:</h4>
+        <h3 id="totaal">€..,-</h3>
+      </div>
+      <input type="checkbox" id="nieuws" name="opdehoogte" value="nieuws">
+      <label for="nieuws"> ik wil af en toe nieuws van het Kwartje ontvangen </label> </br>
+
+      <input type="checkbox" id="voorwaarden" name="opdehoogte" value="voorwaarden" required>
+      <label for="voorwaarden"> Ik heb de algemene voorwaarden gelezen en ga akkoord</label>
+      <p id="foutmelding4"> U moet akkoord gaan met de algemene voorwaarden</p>
+      </br>
+      <input type="submit" value="afrekenen">
+    </form>
+  </body>
+</html>
